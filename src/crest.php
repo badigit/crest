@@ -98,6 +98,7 @@
 				}
 
 				$sPostFields = http_build_query($arParams[ 'params' ]);
+				$methodName = isset($arParams['method']) ? $arParams['method'] : 'unknown_method';
 
 				try
 				{
@@ -173,7 +174,7 @@
 							'params' => $arParams,
 							'result' => $result
 						],
-						'callCurl'
+						$methodName
 					);
 
 					return $result;
