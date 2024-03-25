@@ -456,11 +456,11 @@
 
 		/**
 		 * @var $data mixed
-		 * @var $debag boolean
+		 * @var $debug boolean
 		 *
 		 * @return string json_encode with encoding
 		 */
-		protected static function wrapData($data, $debag = false)
+		protected static function wrapData($data, $debug = false)
 		{
 			if(defined('C_REST_CURRENT_ENCODING'))
 			{
@@ -468,7 +468,7 @@
 			}
 			$return = json_encode($data, JSON_HEX_TAG|JSON_HEX_AMP|JSON_HEX_APOS|JSON_HEX_QUOT);
 
-			if($debag)
+			if($debug)
 			{
 				$e = json_last_error();
 				if ($e != JSON_ERROR_NONE)
@@ -485,7 +485,6 @@
 
 		/**
 		 * @var $data mixed
-		 * @var $debag boolean
 		 *
 		 * @return string json_decode with encoding
 		 */
