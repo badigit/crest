@@ -466,7 +466,7 @@
 			{
 				$data = static::changeEncoding($data, true);
 			}
-			$return = json_encode($data, JSON_HEX_TAG|JSON_HEX_AMP|JSON_HEX_APOS|JSON_HEX_QUOT);
+			$return = json_encode($data, JSON_HEX_TAG|JSON_HEX_AMP|JSON_HEX_APOS|JSON_HEX_QUOT|JSON_PRETTY_PRINT);
 
 			if($debug)
 			{
